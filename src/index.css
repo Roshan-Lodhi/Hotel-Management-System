@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 20% 98%;
+    --foreground: 345 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 345 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 345 30% 15%;
+
+    --primary: 345 65% 35%;
+    --primary-foreground: 30 100% 98%;
+
+    --secondary: 40 95% 55%;
+    --secondary-foreground: 345 30% 15%;
+
+    --muted: 30 20% 95%;
+    --muted-foreground: 345 10% 45%;
+
+    --accent: 40 95% 55%;
+    --accent-foreground: 345 30% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 30 100% 98%;
+
+    --border: 30 15% 88%;
+    --input: 30 15% 88%;
+    --ring: 345 65% 35%;
+
+    --radius: 0.75rem;
+
+    /* Luxury gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(345 65% 35%), hsl(345 75% 45%));
+    --gradient-gold: linear-gradient(135deg, hsl(40 95% 55%), hsl(45 100% 65%));
+    --gradient-subtle: linear-gradient(180deg, hsl(30 20% 98%), hsl(30 15% 95%));
+    --gradient-hero: linear-gradient(135deg, hsl(345 65% 25%) 0%, hsl(345 75% 35%) 100%);
+
+    /* Shadows */
+    --shadow-elegant: 0 10px 40px -10px hsl(345 65% 35% / 0.2);
+    --shadow-gold: 0 8px 32px -8px hsl(40 95% 55% / 0.3);
+    --shadow-soft: 0 4px 16px -4px hsl(345 30% 15% / 0.1);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 30 20% 98%;
+    --sidebar-foreground: 345 30% 15%;
+    --sidebar-primary: 345 65% 35%;
+    --sidebar-primary-foreground: 30 100% 98%;
+    --sidebar-accent: 30 20% 95%;
+    --sidebar-accent-foreground: 345 30% 15%;
+    --sidebar-border: 30 15% 88%;
+    --sidebar-ring: 345 65% 35%;
+  }
+
+  .dark {
+    --background: 345 30% 8%;
+    --foreground: 30 20% 95%;
+
+    --card: 345 25% 12%;
+    --card-foreground: 30 20% 95%;
+
+    --popover: 345 25% 12%;
+    --popover-foreground: 30 20% 95%;
+
+    --primary: 345 65% 45%;
+    --primary-foreground: 30 100% 98%;
+
+    --secondary: 40 85% 50%;
+    --secondary-foreground: 345 30% 15%;
+
+    --muted: 345 20% 20%;
+    --muted-foreground: 30 10% 65%;
+
+    --accent: 40 85% 50%;
+    --accent-foreground: 345 30% 15%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 30 100% 98%;
+
+    --border: 345 20% 20%;
+    --input: 345 20% 20%;
+    --ring: 345 65% 45%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(345 65% 35%), hsl(345 75% 45%));
+    --gradient-gold: linear-gradient(135deg, hsl(40 85% 50%), hsl(45 90% 60%));
+    --gradient-subtle: linear-gradient(180deg, hsl(345 30% 8%), hsl(345 25% 12%));
+    --gradient-hero: linear-gradient(135deg, hsl(345 65% 15%) 0%, hsl(345 75% 25%) 100%);
+
+    --shadow-elegant: 0 10px 40px -10px hsl(345 65% 15% / 0.5);
+    --shadow-gold: 0 8px 32px -8px hsl(40 85% 50% / 0.4);
+    --shadow-soft: 0 4px 16px -4px hsl(0 0% 0% / 0.3);
+
+    --sidebar-background: 345 30% 8%;
+    --sidebar-foreground: 30 20% 95%;
+    --sidebar-primary: 345 65% 45%;
+    --sidebar-primary-foreground: 30 100% 98%;
+    --sidebar-accent: 345 20% 20%;
+    --sidebar-accent-foreground: 30 20% 95%;
+    --sidebar-border: 345 20% 20%;
+    --sidebar-ring: 345 65% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-gold {
+    background: var(--gradient-gold);
+  }
+  
+  .gradient-subtle {
+    background: var(--gradient-subtle);
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+}
